@@ -1,3 +1,4 @@
 node_modules
 .npm-debug.log
 icons/output/
+.package-lock.json
