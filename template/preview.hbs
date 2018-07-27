@@ -1,0 +1,58 @@
+<!doctype HTML>
+<html>
+
+<head>
+  <title>Ingenico - Icons</title>
+  <link rel="stylesheet" type="text/css" href="../../assets/stylesheets/bootstrap.css">
+  <script>
+    {{{loaderText}}}
+    grunticon(["icons-svg.css", "icons-png.css", "icons.fallback.css"]);
+  </script>
+  <noscript><link href="icons-svg.css" rel="stylesheet"></noscript>
+  <style>
+    .ing-icon{
+      float: left;
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row" style='padding-top: 5%'>
+      <h2>Ingenico - Icons</h2>
+      <div class="table-responsive" style='padding-top: 2%'>
+        <table class="table table-sm table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">icon</th>
+              <th scope="col-2">class</th>
+              <th scope="col">code</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each icons}}
+              {{#with this}}
+                <tr>
+                  <th scope="row">
+                    <div {{selectorType}}="ing-icon {{selectorString}}{{name}}"></div>
+                  </th>
+                  <td>
+                    .ing-icon{{prefix}}{{name}}
+                  </td>
+                  <td>
+                    <code> &lt;div {{selectorType}}="ing-icon {{selectorString}}{{name}}"&gt;&lt;/div&gt; </code>
+                  </td>
+                </tr>
+              {{/with}}
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
